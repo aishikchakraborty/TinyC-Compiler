@@ -1,0 +1,286 @@
+	.section	.rodata
+.LC0:
+	.string "Result = "
+.LC1:
+	.string "\n"
+.LC2:
+	.string "\n"
+.LC3:
+	.string "Result = "
+.LC4:
+	.string "\n"
+.LC5:
+	.string "Result = "
+.LC6:
+	.string "\n"
+  # function printi start
+  # function prints start
+  # function readi start
+  # function add start
+#--param_offset:24
+#--param_offset:32
+#--offset4-4
+#--offset4-8
+#-8
+	.globl	add
+	.type	add, @function
+add:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$48,	%rsp
+  # a+b
+	movl	16(%rbp),	%edx
+	movl	24(%rbp),	%eax
+	addl	 %edx,	%eax
+	movl 	 %eax,	-8(%rbp)
+  # c = t0
+	movl	-8(%rbp),	%eax
+	movl	%eax,	-4(%rbp)	
+  # return c
+	movl	-4(%rbp),	%eax
+	leave
+	ret
+  # function add end
+	.size	add,	.-add
+  # function temp start
+#--param_offset:40
+#--offset4-4
+#--offset0-4
+#--offset4-8
+#-8
+	.globl	temp
+	.type	temp, @function
+temp:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$64,	%rsp
+  # t1 = 0
+	movl	$0,	-4(%rbp)
+  # if a !=t1 goto .L0
+	movl	16(%rbp),	%eax
+	cmpl	-4(%rbp),	%eax
+	je	.L2
+	jmp	.L0
+.L2:
+  # goto .L1
+	jmp	.L1
+  # goto .L1
+	jmp	.L1
+  # t3 = 1
+.L0:
+	movl	$1,	-8(%rbp)
+  # a = t3
+	movl	-8(%rbp),	%eax
+	movl	%eax,	32(%rbp)	
+  # goto .L1
+	jmp	.L1
+  # return a
+.L1:
+	movl	32(%rbp),	%eax
+	leave
+	ret
+  # function temp end
+	.size	temp,	.-temp
+  # function sub start
+#--param_offset:48
+#--param_offset:56
+#--offset4-4
+#--offset4-8
+#--offset4-12
+#-12
+	.globl	sub
+	.type	sub, @function
+sub:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$80,	%rsp
+  # t4 = 7
+	movl	$7,	-4(%rbp)
+  # c = t4
+	movl	-4(%rbp),	%eax
+	movl	%eax,	-8(%rbp)	
+  # a-b
+	movl	16(%rbp),	%edx
+	movl	24(%rbp),	%eax
+	subl	 %eax,	 %edx
+	movl	 %edx,	 %eax
+	movl 	 %eax,	-12(%rbp)
+  # c = t5
+	movl	-12(%rbp),	%eax
+	movl	%eax,	-8(%rbp)	
+  # return c
+	movl	-8(%rbp),	%eax
+	leave
+	ret
+  # function sub end
+	.size	sub,	.-sub
+  # function div start
+#--param_offset:64
+#--param_offset:72
+#--offset4-4
+#--offset4-8
+#--offset4-12
+#-12
+	.globl	div
+	.type	div, @function
+div:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$96,	%rsp
+  # t6 = 1
+	movl	$1,	-4(%rbp)
+  # c = t6
+	movl	-4(%rbp),	%eax
+	movl	%eax,	-8(%rbp)	
+  # a/b
+	movl	16(%rbp),	%eax
+	cltd
+	idivl	24(%rbp)
+	movl	%eax,	-12(%rbp)
+  # c = t7
+	movl	-12(%rbp),	%eax
+	movl	%eax,	-8(%rbp)	
+  # return c
+	movl	-8(%rbp),	%eax
+	leave
+	ret
+  # function div end
+	.size	div,	.-div
+  # function main start
+#--offset4-4
+#--offset4-8
+#--offset4-12
+#--offset4-16
+#--offset4-20
+#--offset4-24
+#--offset4-28
+#--offset4-32
+#--offset4-36
+#--offset4-40
+#--offset4-44
+#--offset4-48
+#--offset4-52
+#--offset4-56
+#--offset4-60
+#--offset4-64
+#--offset4-68
+#--offset4-72
+#--offset4-76
+#--offset4-80
+#--offset4-84
+#-84
+	.globl	main
+	.type	main, @function
+main:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$160,	%rsp
+  # t8 = 12
+	movl	$12,	-20(%rbp)
+  # a = t8
+	movl	-20(%rbp),	%eax
+	movl	%eax,	-4(%rbp)	
+  # t9 = 4
+	movl	$4,	-24(%rbp)
+  # b = t9
+	movl	-24(%rbp),	%eax
+	movl	%eax,	-8(%rbp)	
+  # param a
+  # param b
+  # call add 2
+	movq	-8(%rbp),	%rax
+	pushq	%rax
+	movq	-4(%rbp),	%rax
+	pushq	%rax
+	call	add
+	addq	$16,	%rsp
+#--
+  # result = add
+	movl	%eax,	-12(%rbp)
+  # param .LC0
+	movq	$.LC0,	%rdi
+  # call prints 1
+	call	prints
+  # param result
+	movq	-12(%rbp),	%rdi
+  # call printi 1
+	call	printi
+  # param .LC1
+	movq	$.LC1,	%rdi
+  # call prints 1
+	call	prints
+  # t10 = 0
+	movl	$0,	-52(%rbp)
+  # param t10
+  # call temp 1
+	movq	-52(%rbp),	%rax
+	pushq	%rax
+	call	temp
+	addq	$8,	%rsp
+#--
+  # result = temp
+	movl	%eax,	-12(%rbp)
+  # param result
+	movq	-12(%rbp),	%rdi
+  # call printi 1
+	call	printi
+  # param .LC2
+	movq	$.LC2,	%rdi
+  # call prints 1
+	call	prints
+  # param a
+  # param b
+  # call sub 2
+	movq	-8(%rbp),	%rax
+	pushq	%rax
+	movq	-4(%rbp),	%rax
+	pushq	%rax
+	call	sub
+	addq	$16,	%rsp
+#--
+  # result = sub
+	movl	%eax,	-12(%rbp)
+  # param .LC3
+	movq	$.LC3,	%rdi
+  # call prints 1
+	call	prints
+  # param result
+	movq	-12(%rbp),	%rdi
+  # call printi 1
+	call	printi
+  # param .LC4
+	movq	$.LC4,	%rdi
+  # call prints 1
+	call	prints
+  # param a
+  # param b
+  # call div 2
+	movq	-8(%rbp),	%rax
+	pushq	%rax
+	movq	-4(%rbp),	%rax
+	pushq	%rax
+	call	div
+	addq	$16,	%rsp
+#--
+  # result = div
+	movl	%eax,	-12(%rbp)
+  # param .LC5
+	movq	$.LC5,	%rdi
+  # call prints 1
+	call	prints
+  # param result
+	movq	-12(%rbp),	%rdi
+  # call printi 1
+	call	printi
+  # param .LC6
+	movq	$.LC6,	%rdi
+  # call prints 1
+	call	prints
+  # t11 = 0
+	movl	$0,	-84(%rbp)
+  # return t11
+	movl	-84(%rbp),	%eax
+	leave
+	ret
+  # function main end
+	.size	main,	.-main

@@ -1,0 +1,168 @@
+********************Printing Quads**********************
+--------------------------------------------------------
+*********************Quads******************************
+0 : function printi start
+1 : function printi end
+2 : function prints start
+3 : function prints end
+4 : function readi start
+5 : function readi end
+6 : function main start
+7 : param .LC0
+8 : call prints 1
+9 : t0 = 10
+10 : t1 = 10
+11 : param .LC1
+12 : call prints 1
+13 : t2= &p
+14 : param t2
+15 : call readi 1
+16 : n = readi
+17 : param .LC2
+18 : call prints 1
+19 : t3 = 0
+20 : i = t3
+21 : if i <n goto 27
+22 : goto 37
+23 : goto 37
+24 : t5 = i
+25 : i = i+1
+26 : goto 21
+27 : t6= &p
+28 : param t6
+29 : call readi 1
+30 : x = readi
+31 : t7 = 0
+32 : t7*0
+33 : t7+i
+34 : t7*4
+35 : a[t7] = x
+36 : goto 24
+37 : param .LC3
+38 : call prints 1
+39 : t8 = 0
+40 : i = t8
+41 : if i <n goto 47
+42 : goto 57
+43 : goto 57
+44 : t10 = i
+45 : i = i+1
+46 : goto 41
+47 : t11= &p
+48 : param t11
+49 : call readi 1
+50 : x = readi
+51 : t12 = 0
+52 : t12*0
+53 : t12+i
+54 : t12*4
+55 : b[t12] = x
+56 : goto 44
+57 : param .LC4
+58 : call prints 1
+59 : t13 = 0
+60 : i = t13
+61 : if i <n goto 67
+62 : goto 86
+63 : goto 86
+64 : t15 = i
+65 : i = i+1
+66 : goto 61
+67 : t16 = 0
+68 : t16*0
+69 : t16+i
+70 : t16*4
+71 : t17 = a[t16]
+72 : x = t17
+73 : t18 = 0
+74 : t18*0
+75 : t18+i
+76 : t18*4
+77 : t19 = b[t18]
+78 : y = t19
+79 : x*y
+80 : z = t20
+81 : param z
+82 : call printi 1
+83 : param .LC5
+84 : call prints 1
+85 : goto 64
+86 : param .LC6
+87 : call prints 1
+88 : t21 = 0
+89 : return t21
+90 : function main end
+
+----------------SYMBOL TABLE (ST.gbl)-----------------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+printi	function	1		4	0	NULL
+prints	function	1		4	4	NULL
+readi	function	1		4	8	NULL
+main	function	0		0	12	NULL
+----------------------------------------------------
+----------------SYMBOL TABLE of printi----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+num	int		4	0	NULL
+retVal	int		4	4	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of prints----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+c	char		1	0	NULL
+retVal	int		4	1	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of readi----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+eP	int		4	0	NULL
+retVal	int		4	4	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of main----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+prints	int		4	0	NULL
+.LC0	int		4	4	NULL
+t0	int		4	8	10
+a	int[10]		40	12	NULL
+t1	int		4	52	10
+b	int[10]		40	56	NULL
+p	int		4	96	NULL
+n	int		4	100	NULL
+x	int		4	104	NULL
+i	int		4	108	NULL
+y	int		4	112	NULL
+z	int		4	116	NULL
+.LC1	int		4	120	NULL
+readi	int		4	124	NULL
+t2	int		8	128	NULL
+.LC2	int		4	136	NULL
+t3	int		4	140	0
+t4		0	144	NULL
+t5	int		4	144	NULL
+t6	int		8	148	NULL
+t7	int		4	156	NULL
+.LC3	int		4	160	NULL
+t8	int		4	164	0
+t9		0	168	NULL
+t10	int		4	168	NULL
+t11	int		8	172	NULL
+t12	int		4	180	NULL
+.LC4	int		4	184	NULL
+t13	int		4	188	0
+t14		0	192	NULL
+t15	int		4	192	NULL
+t16	int		4	196	NULL
+t17	int[10]		4	200	NULL
+t18	int		4	204	NULL
+t19	int[10]		4	208	NULL
+t20	int		4	212	NULL
+printi	int		4	216	NULL
+.LC5	int		4	220	NULL
+.LC6	int		4	224	NULL
+t21	int		4	228	0
+retVal	int		4	232	NULL
+--------------------------------------------
+----------------Compilation Result------------------
+*****************************************************

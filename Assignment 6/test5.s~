@@ -1,0 +1,161 @@
+	.section	.rodata
+.LC0:
+	.string "\n"
+  # function printi start
+  # function prints start
+  # function readi start
+  # function gcd start
+#--param_offset:24
+#--param_offset:32
+#--offset00
+#--offset00
+#--offset4-4
+#--offset4-8
+#--offset4-12
+#--offset4-16
+#--offset4-20
+#-20
+	.globl	gcd
+	.type	gcd, @function
+gcd:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$64,	%rsp
+  # if a !=b goto .L0
+.L5:
+	movl	16(%rbp),	%eax
+	cmpl	24(%rbp),	%eax
+	je	.L6
+	jmp	.L0
+.L6:
+  # goto .L1
+	jmp	.L1
+  # goto .L1
+	jmp	.L1
+  # if a >b goto .L2
+.L0:
+	movl	16(%rbp),	%eax
+	cmpl	24(%rbp),	%eax
+	jge	.L7
+	jmp	.L2
+.L7:
+  # goto .L3
+	jmp	.L3
+  # goto .L4
+	jmp	.L4
+  # a-b
+.L2:
+	movl	16(%rbp),	%edx
+	movl	24(%rbp),	%eax
+	subl	 %eax,	 %edx
+	movl	 %edx,	 %eax
+	movl 	 %eax,	-8(%rbp)
+  # param t2
+  # param b
+  # call gcd 2
+	movq	24(%rbp),	%rax
+	pushq	%rax
+	movq	-8(%rbp),	%rax
+	pushq	%rax
+	call	gcd
+	addq	$16,	%rsp
+#--
+  # t3 = gcd
+	movl	%eax,	-12(%rbp)
+  # return t3
+	movl	-12(%rbp),	%eax
+	leave
+	ret
+  # goto .L5
+	jmp	.L5
+  # b-a
+.L3:
+	movl	24(%rbp),	%edx
+	movl	16(%rbp),	%eax
+	subl	 %eax,	 %edx
+	movl	 %edx,	 %eax
+	movl 	 %eax,	-16(%rbp)
+  # param a
+  # param t4
+  # call gcd 2
+	movq	-16(%rbp),	%rax
+	pushq	%rax
+	movq	16(%rbp),	%rax
+	pushq	%rax
+	call	gcd
+	addq	$16,	%rsp
+#--
+  # t5 = gcd
+	movl	%eax,	-20(%rbp)
+  # return t5
+	movl	-20(%rbp),	%eax
+	leave
+	ret
+  # goto .L5
+	jmp	.L5
+  # goto .L5
+.L4:
+	jmp	.L5
+  # return a
+.L1:
+	movl	16(%rbp),	%eax
+	leave
+	ret
+  # function gcd end
+	.size	gcd,	.-gcd
+  # function main start
+#--offset4-4
+#--offset4-8
+#--offset4-12
+#--offset4-16
+#--offset4-20
+#--offset4-24
+#--offset4-28
+#--offset4-32
+#--offset4-36
+#--offset4-40
+#-40
+	.globl	main
+	.type	main, @function
+main:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$64,	%rsp
+  # t6 = 6
+	movl	$6,	-16(%rbp)
+  # a = t6
+	movl	-16(%rbp),	%eax
+	movl	%eax,	-4(%rbp)	
+  # t7 = 3
+	movl	$3,	-20(%rbp)
+  # b = t7
+	movl	-20(%rbp),	%eax
+	movl	%eax,	-8(%rbp)	
+  # param a
+  # param b
+  # call gcd 2
+	movq	-8(%rbp),	%rax
+	pushq	%rax
+	movq	-4(%rbp),	%rax
+	pushq	%rax
+	call	gcd
+	addq	$16,	%rsp
+#--
+  # c = gcd
+	movl	%eax,	-12(%rbp)
+  # param c
+	movq	-12(%rbp),	%rdi
+  # call printi 1
+	call	printi
+  # param .LC0
+	movq	$.LC0,	%rdi
+  # call prints 1
+	call	prints
+  # t8 = 0
+	movl	$0,	-40(%rbp)
+  # return t8
+	movq	-40(%rbp),	%rax
+	leave
+	ret
+  # function main end
+	.size	main,	.-main

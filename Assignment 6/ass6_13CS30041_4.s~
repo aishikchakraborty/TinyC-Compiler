@@ -1,0 +1,227 @@
+	.section	.rodata
+.LC0:
+	.string "\n"
+  # function printi start
+  # function readi start
+  # function prints start
+  # t0 = 3
+  # function func start
+#--param_offset:24
+#--param_offset:32
+#--loacl var offset: 4 -4
+#--loacl var offset: 4 -8
+#--loacl var offset: 4 -12
+#--loacl var offset: 4 -16
+#-16
+##ptra
+##ptrn
+##ptrt1
+##ptrt2
+##ptrt3
+##ptrt4
+##ptrretVal
+	.globl	func
+	.type	func, @function
+func:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$64,	%rsp
+  # t1 = 0
+	movl	$0,	-4(%rbp)
+  # t2 = 0
+	movl	$0,	-8(%rbp)
+  # t2*3
+	movl	-8(%rbp),	%eax
+	imull	$3,%eax
+	movl	%eax,	-8(%rbp)
+  # t2+t1
+	movl	-8(%rbp),	%edx
+	movl	-4(%rbp),	%eax
+	addl	 %edx,	%eax
+	movl	 %eax,	-8(%rbp)
+  # t2*4
+	movl	-8(%rbp),	%eax
+	imull	$4,%eax
+	movl	%eax,	-8(%rbp)
+  # t3 = 1
+	movl	$1,	-12(%rbp)
+  # a[t2] = t3
+	movslq	-8(%rbp),	%rdx
+	movl	-12(%rbp),	%eax
+	movq	%rax,	16(%rbp,%rdx,1)
+  # t4 = 3
+	movl	$3,	-16(%rbp)
+  # n = t4
+	movl	-16(%rbp),	%eax
+	movl	%eax,	24(%rbp)
+  # function func end
+	leave
+	ret
+	.size	func,	.-func
+  # function main start
+#--loacl var offset: 4 -4
+#--loacl var offset: 4 -8
+#--loacl var offset: 12 -20
+#--loacl var offset: 4 -24
+#--loacl var offset: 4 -28
+#--loacl var offset: 4 -32
+#--loacl var offset: 4 -36
+#--loacl var offset: 4 -40
+#--loacl var offset: 4 -44
+#--loacl var offset: 4 -48
+#--loacl var offset: 4 -52
+#--loacl var offset: 4 -56
+#--loacl var offset: 4 -60
+#--loacl var offset: 4 -64
+#--loacl var offset: 4 -68
+#--loacl var offset: 4 -72
+#--loacl var offset: 4 -76
+#--loacl var offset: 4 -80
+#--loacl var offset: 4 -84
+#--loacl var offset: 4 -88
+#-88
+##ptrn
+##ptrt5
+##ptra
+##ptrt6
+##ptrt7
+##ptrt8
+##ptrt9
+##ptrt10
+##ptrt11
+##ptrt12
+##ptrt13
+##ptrt14
+##ptrfunc
+##ptrt15
+##ptrprinti
+##ptrt16
+##ptrt17
+##ptrprints
+##ptr.LC0
+##ptrt18
+##ptrretVal
+	.globl	main
+	.type	main, @function
+main:
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$112,	%rsp
+  # t5 = 3
+	movl	$3,	-8(%rbp)
+  # t6 = 0
+	movl	$0,	-24(%rbp)
+  # t7 = 0
+	movl	$0,	-28(%rbp)
+  # t7*0
+	movl	-28(%rbp),	%eax
+	imull	$0,%eax
+	movl	%eax,	-28(%rbp)
+  # t7+t6
+	movl	-28(%rbp),	%edx
+	movl	-24(%rbp),	%eax
+	addl	 %edx,	%eax
+	movl	 %eax,	-28(%rbp)
+  # t7*4
+	movl	-28(%rbp),	%eax
+	imull	$4,%eax
+	movl	%eax,	-28(%rbp)
+  # t8 = 2
+	movl	$2,	-32(%rbp)
+  # a[t7] = t8
+	movslq	-28(%rbp),	%rdx
+	movslq	-32(%rbp),	%rax
+	movq	%rax,	-20(%rbp,%rdx,1)
+  # t9 = 1
+	movl	$1,	-36(%rbp)
+  # t10 = 0
+	movl	$0,	-40(%rbp)
+  # t10*0
+	movl	-40(%rbp),	%eax
+	imull	$0,%eax
+	movl	%eax,	-40(%rbp)
+  # t10+t9
+	movl	-40(%rbp),	%edx
+	movl	-36(%rbp),	%eax
+	addl	 %edx,	%eax
+	movl	 %eax,	-40(%rbp)
+  # t10*4
+	movl	-40(%rbp),	%eax
+	imull	$4,%eax
+	movl	%eax,	-40(%rbp)
+  # t11 = 2
+	movl	$2,	-44(%rbp)
+  # a[t10] = t11
+	movslq	-40(%rbp),	%rdx
+	movslq	-44(%rbp),	%rax
+	movq	%rax,	-20(%rbp,%rdx,1)
+  # t12 = 2
+	movl	$2,	-48(%rbp)
+  # t13 = 0
+	movl	$0,	-52(%rbp)
+  # t13*0
+	movl	-52(%rbp),	%eax
+	imull	$0,%eax
+	movl	%eax,	-52(%rbp)
+  # t13+t12
+	movl	-52(%rbp),	%edx
+	movl	-48(%rbp),	%eax
+	addl	 %edx,	%eax
+	movl	 %eax,	-52(%rbp)
+  # t13*4
+	movl	-52(%rbp),	%eax
+	imull	$4,%eax
+	movl	%eax,	-52(%rbp)
+  # t14 = 3
+	movl	$3,	-56(%rbp)
+  # a[t13] = t14
+	movslq	-52(%rbp),	%rdx
+	movslq	-56(%rbp),	%rax
+	movq	%rax,	-20(%rbp,%rdx,1)
+  # t15 = 3
+	movl	$3,	-64(%rbp)
+  # param a
+  # param t15
+  # call func 2
+	movq	-64(%rbp),	%rax
+	pushq	%rax
+	leaq	-20(%rbp),	%rax
+	pushq	%rax
+	call	func
+	addq	$16,	%rsp
+#--
+  # t16 = 0
+	movl	$0,	-72(%rbp)
+  # t17 = 0
+	movl	$0,	-76(%rbp)
+  # t17*0
+	movl	-76(%rbp),	%eax
+	imull	$0,%eax
+	movl	%eax,	-76(%rbp)
+  # t17+t16
+	movl	-76(%rbp),	%edx
+	movl	-72(%rbp),	%eax
+	addl	 %edx,	%eax
+	movl	 %eax,	-76(%rbp)
+  # t17*4
+	movl	-76(%rbp),	%eax
+	imull	$4,%eax
+	movl	%eax,	-76(%rbp)
+  # param a
+	movq	-20(%rbp),	%rdi
+  # call printi 1
+	call	printi
+  # param .LC0
+	movq	$.LC0,	%rdi
+  # call prints 1
+	call	prints
+  # t18 = 0
+	movl	$0,	-88(%rbp)
+  # return t18
+	movq	-88(%rbp),	%rax
+	leave
+	ret
+  # function main end
+	leave
+	ret
+	.size	main,	.-main

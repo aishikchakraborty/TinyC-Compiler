@@ -1,0 +1,70 @@
+	.section	.rodata
+  # function printi start
+  # function prints start
+  # function readi start
+  # function f start
+#--offset4-4
+#--offset4-8
+#-8
+	.globl	f
+	.type	f, @function
+f:
+.cfi_startproc
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$32,	%rsp
+  # t0= *a
+	movl	16(%rbp),	%eax
+	movl	(%eax),	 %ecx
+	movl	%ecx,	-4(%rbp)
+  # t1 = 1
+	movl	$1,	-8(%rbp)
+  # t0 = t1
+	movl	-8(%rbp),	%eax
+	movl	%eax,	-4(%rbp)	
+  # function f end
+	addq	$32,	%rsp
+	popq	%rbp
+	ret
+	.cfi_endproc
+	.size	f,	.-f
+  # function main start
+#--offset4-4
+#--offset4-8
+#--offset4-12
+#--offset4-16
+#--offset8-24
+#--offset4-28
+#--offset4-32
+#-32
+	.globl	main
+	.type	main, @function
+main:
+.cfi_startproc
+	pushq	%rbp
+	movq	%rsp, %rbp
+	subq	$64,	%rsp
+  # t2 = 2
+	movl	$2,	-12(%rbp)
+  # b = t2
+	movl	-12(%rbp),	%eax
+	movl	%eax,	-8(%rbp)	
+  # t3= &b
+	leaq	-8(%rbp),	%eax
+	movl	%eax,	-16(%rbp)
+  # param e
+	movq	-24(%rbp),	%rdi
+  # call readi 1
+	call	readi
+  # b = readi
+	movl	%eax,	-8(%rbp)
+  # t4 = 1
+	movl	$1,	-32(%rbp)
+  # return t4
+	movl	-32(%rbp),	%eax
+  # function main end
+	addq	$64,	%rsp
+	popq	%rbp
+	ret
+	.cfi_endproc
+	.size	main,	.-main

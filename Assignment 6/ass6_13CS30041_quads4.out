@@ -1,0 +1,228 @@
+********************Printing Quads**********************
+--------------------------------------------------------
+*********************Quads******************************
+0 : function printi start
+1 : function printi end
+2 : function readi start
+3 : function readi end
+4 : function prints start
+5 : function prints end
+6 : t0 = 10
+7 : function binary_search start
+8 : if left <right goto 15
+9 : goto 11
+10 : goto 14
+11 : if left ==right goto 15
+12 : goto 59
+13 : goto 14
+14 : goto 63
+15 : left+right
+16 : t4 = 2
+17 : t3/t4
+18 : middle = t5
+19 : t6 = 0
+20 : t6*10
+21 : t6+middle
+22 : t6*4
+23 : t7 = arr[t6]
+24 : if t7 ==search_key goto 27
+25 : goto 29
+26 : goto 58
+27 : return middle
+28 : goto 
+29 : t9 = 0
+30 : t9*10
+31 : t9+middle
+32 : t9*4
+33 : t10 = arr[t9]
+34 : if search_key <t10 goto 37
+35 : goto 47
+36 : goto 57
+37 : t12 = 1
+38 : middle-t12
+39 : param arr
+40 : param left
+41 : param t13
+42 : param search_key
+43 : call binary_search 4
+44 : temp = binary_search
+45 : return temp
+46 : goto 
+47 : t14 = 1
+48 : middle+t14
+49 : param arr
+50 : param t15
+51 : param right
+52 : param search_key
+53 : call binary_search 4
+54 : temp = binary_search
+55 : return temp
+56 : goto 
+57 : goto 
+58 : goto 
+59 : t16 = 1
+60 : t17 = -t16
+61 : return t17
+62 : goto 
+63 : function binary_search end
+64 : function main start
+65 : t18 = 10
+66 : param .LC0
+67 : call prints 1
+68 : param .LC1
+69 : call prints 1
+70 : t19= &p
+71 : param t19
+72 : call readi 1
+73 : n = readi
+74 : param .LC2
+75 : call prints 1
+76 : t20 = 0
+77 : i = t20
+78 : if i <n goto 84
+79 : goto 94
+80 : goto 94
+81 : t22 = i
+82 : i = i+1
+83 : goto 78
+84 : t23= &p
+85 : param t23
+86 : call readi 1
+87 : x = readi
+88 : t24 = 0
+89 : t24*0
+90 : t24+i
+91 : t24*4
+92 : a[t24] = x
+93 : goto 81
+94 : param .LC3
+95 : call prints 1
+96 : t25= &p
+97 : param t25
+98 : call readi 1
+99 : value = readi
+100 : t26 = 0
+101 : t27 = 1
+102 : n-t27
+103 : param a
+104 : param t26
+105 : param t28
+106 : param value
+107 : call binary_search 4
+108 : ret_value = binary_search
+109 : t29 = 1
+110 : t30 = -t29
+111 : if ret_value ==t30 goto 114
+112 : goto 117
+113 : goto 124
+114 : param .LC4
+115 : call prints 1
+116 : goto 124
+117 : param .LC5
+118 : call prints 1
+119 : param ret_value
+120 : call printi 1
+121 : param .LC6
+122 : call prints 1
+123 : goto 124
+124 : t32 = 0
+125 : return t32
+126 : function main end
+
+----------------SYMBOL TABLE (ST.gbl)-----------------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+printi	function	1		4	0	NULL
+readi	function	1		4	4	NULL
+prints	function	1		4	8	NULL
+t0	int		4	12	10
+binary_search	function	4		0	16	NULL
+main	function	0		0	16	NULL
+----------------------------------------------------
+----------------SYMBOL TABLE of printi----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+n	int		4	0	NULL
+retVal	int		4	4	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of readi----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+eP	int		4	0	NULL
+retVal	int		4	4	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of prints----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+str	char		1	0	NULL
+retVal	int		4	1	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of binary_search----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+arr	int [10]		40	0	NULL
+left	int		4	40	NULL
+right	int		4	44	NULL
+search_key	int		4	48	NULL
+middle	int		4	52	NULL
+temp	int		4	56	NULL
+t1		0	60	NULL
+t2		0	60	NULL
+t3	int		4	60	NULL
+t4	int		4	64	2
+t5	int		4	68	NULL
+t6	int		4	72	NULL
+t7	int [10]		40	76	NULL
+t8		0	116	NULL
+retVal	int		4	116	NULL
+t9	int		4	120	NULL
+t10	int [10]		40	124	NULL
+t11		0	164	NULL
+binary_search	int		4	164	NULL
+t12	int		4	168	1
+t13	int		4	172	NULL
+t14	int		4	176	1
+t15	int		4	180	NULL
+t16	int		4	184	1
+t17	int		4	188	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of main----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+n		4	0	NULL
+p		4	4	NULL
+i		4	8	NULL
+x		4	12	NULL
+value		4	16	NULL
+t18	int		4	20	10
+a	int[10]		40	24	NULL
+prints	int		4	64	NULL
+.LC0	int		4	68	NULL
+.LC1	int		4	72	NULL
+readi	int		4	76	NULL
+t19	int		8	80	NULL
+.LC2	int		4	88	NULL
+t20	int		4	92	0
+t21		0	96	NULL
+t22	int		4	96	NULL
+t23	int		8	100	NULL
+t24	int		4	108	NULL
+.LC3	int		4	112	NULL
+t25	int		8	116	NULL
+ret_value	int		4	124	NULL
+binary_search	int		4	128	NULL
+t26	int		4	132	0
+t27	int		4	136	1
+t28	int		4	140	NULL
+t29	int		4	144	1
+t30	int		4	148	NULL
+t31		0	152	NULL
+.LC4	int		4	152	NULL
+.LC5	int		4	156	NULL
+printi	int		4	160	NULL
+.LC6	int		4	164	NULL
+t32	int		4	168	0
+retVal	int		4	172	NULL
+--------------------------------------------
+----------------Compilation Result------------------
+*****************************************************

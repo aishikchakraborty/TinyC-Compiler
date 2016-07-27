@@ -1,0 +1,122 @@
+********************Printing Quads**********************
+--------------------------------------------------------
+*********************Quads******************************
+0 : function printi start
+1 : function printi end
+2 : function prints start
+3 : function prints end
+4 : function readi start
+5 : function readi end
+6 : function f start
+7 : t0= *a
+8 : b = t0
+9 : t1 = 2
+10 : b+t1
+11 : b = t2
+12 : return b
+13 : function f end
+14 : function main start
+15 : param .LC0
+16 : call prints 1
+17 : t3 = 3
+18 : b = t3
+19 : t4= &b
+20 : e = t4
+21 : param .LC1
+22 : call prints 1
+23 : param .LC2
+24 : call prints 1
+25 : param b
+26 : call printi 1
+27 : param .LC3
+28 : call prints 1
+29 : param e
+30 : call f 1
+31 : a = f
+32 : param .LC4
+33 : call prints 1
+34 : param a
+35 : call printi 1
+36 : param .LC5
+37 : call prints 1
+38 : param .LC6
+39 : call prints 1
+40 : param .LC7
+41 : call prints 1
+42 : param e
+43 : call readi 1
+44 : b = readi
+45 : param .LC8
+46 : call prints 1
+47 : param b
+48 : call printi 1
+49 : param .LC9
+50 : call prints 1
+51 : t5 = 0
+52 : return t5
+53 : function main end
+
+----------------SYMBOL TABLE (ST.gbl)-----------------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+printi	function	1		4	0	NULL
+prints	function	1		4	4	NULL
+readi	function	1		4	8	NULL
+f	function	1		0	12	NULL
+main	function	0		0	12	NULL
+----------------------------------------------------
+----------------SYMBOL TABLE of printi----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+num	int		4	0	NULL
+retVal	int		4	4	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of prints----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+c	char		1	0	NULL
+retVal	int		4	1	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of readi----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+eP	int		4	0	NULL
+retVal	int		4	4	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of f----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+a	int		4	0	NULL
+b	int		4	4	NULL
+t0	int		4	8	NULL
+t1	int		4	12	2
+t2	int		4	16	NULL
+retVal	int		4	20	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of main----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+a	int		4	0	NULL
+b	int		4	4	NULL
+e	*		8	8	NULL
+prints	int		4	16	NULL
+.LC0	int		4	20	NULL
+t3	int		4	24	3
+t4	int		8	28	NULL
+.LC1	int		4	36	NULL
+.LC2	int		4	40	NULL
+printi	int		4	44	NULL
+.LC3	int		4	48	NULL
+f	int		4	52	NULL
+.LC4	int		4	56	NULL
+.LC5	int		4	60	NULL
+.LC6	int		4	64	NULL
+.LC7	int		4	68	NULL
+readi	int		4	72	NULL
+.LC8	int		4	76	NULL
+.LC9	int		4	80	NULL
+t5	int		4	84	0
+retVal	int		4	88	NULL
+--------------------------------------------
+----------------Compilation Result------------------
+*****************************************************

@@ -1,0 +1,216 @@
+********************Printing Quads**********************
+--------------------------------------------------------
+*********************Quads******************************
+0 : function printi start
+1 : function printi end
+2 : function prints start
+3 : function prints end
+4 : function readi start
+5 : function readi end
+6 : function factorial start
+7 : t0 = 0
+8 : if n ==t0 goto 11
+9 : goto 14
+10 : goto 20
+11 : t2 = 1
+12 : return t2
+13 : goto 20
+14 : t3 = 1
+15 : n-t3
+16 : param t4
+17 : call factorial 1
+18 : a = factorial
+19 : goto 20
+20 : n*a
+21 : return t5
+22 : function factorial end
+23 : function fibonaci start
+24 : t6 = 0
+25 : if i ==t6 goto 28
+26 : goto 31
+27 : goto 31
+28 : t8 = 0
+29 : return t8
+30 : goto 31
+31 : t9 = 1
+32 : if i ==t9 goto 35
+33 : goto 38
+34 : goto 38
+35 : t11 = 1
+36 : return t11
+37 : goto 38
+38 : t12 = 1
+39 : i-t12
+40 : param t13
+41 : call fibonaci 1
+42 : a = fibonaci
+43 : t14 = 2
+44 : i-t14
+45 : param t15
+46 : call fibonaci 1
+47 : b = fibonaci
+48 : a+b
+49 : c = t16
+50 : return c
+51 : function fibonaci end
+52 : function main start
+53 : param .LC0
+54 : call prints 1
+55 : param .LC1
+56 : call prints 1
+57 : t17= &p
+58 : param t17
+59 : call readi 1
+60 : num = readi
+61 : t18 = 10
+62 : if num >t18 goto 65
+63 : goto 68
+64 : goto 82
+65 : param .LC2
+66 : call prints 1
+67 : goto 82
+68 : param num
+69 : call factorial 1
+70 : fact = factorial
+71 : param .LC3
+72 : call prints 1
+73 : param num
+74 : call printi 1
+75 : param .LC4
+76 : call prints 1
+77 : param fact
+78 : call printi 1
+79 : param .LC5
+80 : call prints 1
+81 : goto 82
+82 : param .LC6
+83 : call prints 1
+84 : param .LC7
+85 : call prints 1
+86 : t20= &p
+87 : param t20
+88 : call readi 1
+89 : num = readi
+90 : t21 = 10
+91 : if num >t21 goto 94
+92 : goto 97
+93 : goto 111
+94 : param .LC8
+95 : call prints 1
+96 : goto 111
+97 : param num
+98 : call fibonaci 1
+99 : fib = fibonaci
+100 : param .LC9
+101 : call prints 1
+102 : param num
+103 : call printi 1
+104 : param .LC10
+105 : call prints 1
+106 : param fib
+107 : call printi 1
+108 : param .LC11
+109 : call prints 1
+110 : goto 111
+111 : t23 = 0
+112 : return t23
+113 : function main end
+
+----------------SYMBOL TABLE (ST.gbl)-----------------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+printi	function	1		4	0	NULL
+prints	function	1		4	4	NULL
+readi	function	1		4	8	NULL
+factorial	function	1		0	12	NULL
+fibonaci	function	1		0	12	NULL
+main	function	0		0	12	NULL
+----------------------------------------------------
+----------------SYMBOL TABLE of printi----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+num	int		4	0	NULL
+retVal	int		4	4	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of prints----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+c	char		1	0	NULL
+retVal	int		4	1	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of readi----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+eP	int		4	0	NULL
+retVal	int		4	4	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of factorial----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+n	int		4	0	NULL
+t0	int		4	4	0
+t1		0	8	NULL
+t2	int		4	8	1
+retVal	int		4	12	NULL
+a	int		4	16	NULL
+factorial	int		4	20	NULL
+t3	int		4	24	1
+t4	int		4	28	NULL
+t5	int		4	32	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of fibonaci----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+i	int		4	0	NULL
+t6	int		4	4	0
+t7		0	8	NULL
+t8	int		4	8	0
+retVal	int		4	12	NULL
+t9	int		4	16	1
+t10		0	20	NULL
+t11	int		4	20	1
+a	int		4	24	NULL
+b	int		4	28	NULL
+c	int		4	32	NULL
+fibonaci	int		4	36	NULL
+t12	int		4	40	1
+t13	int		4	44	NULL
+t14	int		4	48	2
+t15	int		4	52	NULL
+t16	int		4	56	NULL
+--------------------------------------------
+----------------SYMBOL TABLE of main----------------
+Name	Type	Size	Offset	InitVal
+---------------------------------------
+num	int		4	0	NULL
+fact	int		4	4	NULL
+fib	int		4	8	NULL
+prints	int		4	12	NULL
+.LC0	int		4	16	NULL
+.LC1	int		4	20	NULL
+p	int		4	24	NULL
+readi	int		4	28	NULL
+t17	int		8	32	NULL
+t18	int		4	40	10
+t19		0	44	NULL
+.LC2		4	44	NULL
+factorial	int		4	48	NULL
+.LC3	int		4	52	NULL
+printi	int		4	56	NULL
+.LC4	int		4	60	NULL
+.LC5	int		4	64	NULL
+.LC6	int		4	68	NULL
+.LC7	int		4	72	NULL
+t20	int		8	76	NULL
+t21	int		4	84	10
+t22		0	88	NULL
+.LC8	int		4	88	NULL
+fibonaci	int		4	92	NULL
+.LC9	int		4	96	NULL
+.LC10	int		4	100	NULL
+.LC11	int		4	104	NULL
+t23	int		4	108	0
+retVal	int		4	112	NULL
+--------------------------------------------
+----------------Compilation Result------------------
+*****************************************************
